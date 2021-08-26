@@ -1,6 +1,6 @@
-# Title
+# Movie Bucket
 
-##Description
+## Description
 
 This app allows you to add movies to a bucket list. Eventually, it will allow you to gain points for watching an item such as a movie or episode of a show. Maybe you can redeem the points and get some sort of reward.
 
@@ -9,7 +9,9 @@ This app allows you to add movies to a bucket list. Eventually, it will allow yo
 - Download this repository
 - npm install
 - Get API token from [The Movie DB](https://developers.themoviedb.org/3/getting-started/introduction)
-  \*\* set variable with API token
+
+* set variable with API token
+
 - npm start
 
 ## Created By
