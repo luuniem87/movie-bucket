@@ -1,0 +1,27 @@
+.episode {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  episode__title-wrap {
+    display: flex;
+    .episode__title {
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+    }
+    .episode__number {
+      font-size: 0.9rem;
+      color: white;
+    }
+  }
+  .episode__image {
+    width: 25%;
+    position: relative;
+    .episode__duration {
+      background: #ff5e00;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+  }
+}

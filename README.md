@@ -1,8 +1,8 @@
-# Movie Bucket
+# ShareTertainment
 
 ## Description
 
-This app allows you to add movies to a bucket list. Eventually, it will allow you to gain points for watching an item such as a movie or episode of a show. Maybe you can redeem the points and get some sort of reward.
+This app allows a user to share what they're watching with their friends.
 
 ## Installation and Running
 
@@ -22,6 +22,7 @@ Niem L Nguyen
 
 React JS
 Material UI
+Layout inspiration - [OTT Platform UI Design - by CMARIX TechnoLabs](https://dribbble.com/shots/15399146-OTT-Platform-UI-Design/attachments/7164328?mode=media)
 
 ### License and Copyright
 
