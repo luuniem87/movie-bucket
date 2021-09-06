@@ -1,34 +1,17 @@
-import React, { useState, useCallback, useEffect } from "react";
-import axios from "axios";
-
-const API_KEY = process.env.REACT_APP_API_KEY;
-const DISCOVER_TV = process.env.REACT_APP_DISCOVER_TV;
+import React, { useState } from "react";
+import RecommendedList from "./RecommendedList";
+import Video from "./Video";
 
 const SeriesMain = (props) => {
-  const [error, setError] = useState(null);
-  const [series, setSeries] = useState([]);
-  // Make a request for a user with a given ID
+  const [seriesId, setSeriesId] = useState("");
+  console.log(seriesId);
 
-  const fetchSeriesHandler = useCallback(async () => {
-    try {
-      const response = await fetch(`${DISCOVER_TV}${API_KEY}`);
-
-      if (!response.ok) {
-        throw new Error("something went wrong");
-      }
-      const data = await response.json();
-      console.log(data);
-      setSeries(data);
-    } catch (error) {
-      setError(error.message);
-    }
-  }, []);
-
-  useEffect(() => {
-    fetchSeriesHandler();
-  }, [fetchSeriesHandler]);
-
-  return <div>test</div>;
+  return (
+    <>
+      <Video tv_id={seriesId} />
+      <RecommendedList passSeriesId={(seriesId) => setSeriesId(seriesId)} />
+    </>
+  );
 };
 
 export default SeriesMain;

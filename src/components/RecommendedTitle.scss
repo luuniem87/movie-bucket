@@ -1,0 +1,14 @@
+.recommended__item {
+  width: 15%;
+  list-style: none;
+  margin-right: 10px;
+  flex: 0 0 auto;
+  transition: all 0.25s ease-in-out;
+  img {
+    width: 100%;
+  }
+  :hover {
+    transform: scale(1.1);
+    border: 1px solid red;
+  }
+}
