@@ -12,7 +12,9 @@ const SeriesMain = (props) => {
     const response = await fetch(videoURL);
     const data = await response.json();
     const transformToVideo = data.results
-      .filter(({ official }) => official)
+      .filter(({ official, type }) => {
+        if (official === true && type === "Trailer") return true;
+      })
       .map((videoData) => {
         return {
           id: videoData.id,
