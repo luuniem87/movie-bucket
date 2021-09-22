@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import RecommendedList from "./RecommendedList";
 import Video from "./Video";
+import "./SeriesMain.scss";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const SeriesMain = (props) => {
@@ -12,8 +13,8 @@ const SeriesMain = (props) => {
     const response = await fetch(videoURL);
     const data = await response.json();
     const transformToVideo = data.results
-      .filter(({ official, type }) => {
-        if (official === true && type === "Trailer") return true;
+      .filter(({ type }) => {
+        if (type === "Trailer") return true;
       })
       .map((videoData) => {
         return {
@@ -24,14 +25,14 @@ const SeriesMain = (props) => {
         };
       });
     console.log(transformToVideo);
-    setSeriesId(transformToVideo);
+    setSeriesId(transformToVideo[0]);
   }
 
   return (
-    <>
-      {/* <Video tv_id={seriesId[0].youTubeKey[0]} /> */}
+    <div div className="seriesMain-container">
+      <Video tv_id={seriesId.youTubeKey} />
       <RecommendedList passSeriesId={seriesHandler} />
-    </>
+    </div>
   );
 };
 

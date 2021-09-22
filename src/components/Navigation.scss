@@ -1,0 +1,35 @@
+.navigation-container {
+  width: 20%;
+  ul {
+    display: flex;
+    flex-direction: column;
+    li {
+      padding: 20px;
+      list-style: none;
+      color: white;
+      transition: all 0.25s ease-in-out;
+      position: relative;
+    }
+    :hover {
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.75) 0%,
+        rgba(184, 184, 184, 0.5) 25%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(184, 184, 184, 0.5) 75%,
+        rgba(255, 255, 255, 0.75) 100%
+      );
+      border-radius: 5px;
+    }
+    :hover:before {
+      content: "";
+      height: 80%;
+      width: 5px;
+      background: orange;
+      position: absolute;
+      left: -100px;
+      top: 5px;
+    }
+  }
+}
