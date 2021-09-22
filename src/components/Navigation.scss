@@ -9,6 +9,10 @@
       color: white;
       transition: all 0.25s ease-in-out;
       position: relative;
+      a {
+        color: white;
+        text-decoration: none;
+      }
     }
     :hover {
       background: rgb(255, 255, 255);

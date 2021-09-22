@@ -6,17 +6,17 @@ html {
   text-align: center;
   padding: 5vh 5vw;
   height: 100vh;
+  display: flex;
 }
 
 .body-wrapper {
-  display: flex;
   padding: 5vh 5vw;
   background: rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+  width: 100vw;
+  height: 100vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -47,4 +47,8 @@ html {
   to {
     transform: rotate(360deg);
   }
+}
+
+h3 {
+  color: white;
 }
