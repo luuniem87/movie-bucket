@@ -1,8 +1,8 @@
 
 import './App.scss';
 import { Route } from 'react-router-dom';
-import SeriesMain from './components/SeriesMain';
-import Movie from './components/Movie';
+import SeriesMain from './components/Series/SeriesMain';
+import MovieList from './components/Movies/MovieList';
 import Navigation
  from './components/Navigation';
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <SeriesMain/>
       </Route>
       <Route path="/movies">
-        <Movie/>
+        <MovieList/>
       </Route>
       </div>
    </main>

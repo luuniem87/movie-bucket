@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import RecommendedList from "./RecommendedList";
-import Video from "./Video";
+import Video from "../Video";
 import "./SeriesMain.scss";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -30,7 +30,7 @@ const SeriesMain = (props) => {
 
   return (
     <div div className="seriesMain-container">
-      <Video tv_id={seriesId.youTubeKey} />
+      <Video title_id={seriesId.youTubeKey} />
       <RecommendedList passSeriesId={seriesHandler} />
     </div>
   );
